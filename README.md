@@ -1,4 +1,4 @@
-#PROTOTYPE EYE DISEASE DETECTION
+# Prototype Eye Disease Detection
 
 prototype yang dibuat merupakan web berbasis web yang dipadukan dengan model machine learning deteksi penyakit mata (normal, glaukoma , katarak, dan retinopathy diabetik) yang telah dikonversi menjadi tensorflowjs untuk memudahkan develop kedalam sistem web
 
