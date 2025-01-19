@@ -1,3 +1,8 @@
+**PROTOTYPE EYE DISEASE DETECTION**
+
+prototype yang dibuat merupakan web berbasis web yang dipadukan dengan model machine learning deteksi penyakit mata (normal, glaukoma , katarak, dan retinopathy diabetik) yang telah dikonversi menjadi tensorflowjs untuk memudahkan develop kedalam sistem web
+
+cara instal : 
 1. download ekstensi live server pada vscode
 2. jalankan live server dengan cara menekan tombol go live pada bagian kanan bawah vscode
 3. jika berhasil maka browser akan otomatis terbuka dan menampilkan aplikasi
