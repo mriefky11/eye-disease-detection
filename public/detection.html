@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Eye Disease Detection</title>
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link href="assets/css/theme.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block"
+            data-navbar-on-scroll="data-navbar-on-scroll">
+            <div class="container"><a class="navbar-brand" href="index.html">
+                    <h3>Eye Disease Detection</h3>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon">
+                    </span></button>
+                <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto pt-2 pt-lg-0 font-base">
+                        <li class="nav-item px-2"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item px-2"><a class="nav-link" href="detection.html">Detection</a></li>
+                        <li class="nav-item px-2"><a class="nav-link" href="history.html">History</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- ============================================
+        <section> begin ============================ -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center">Detection</h1>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================ -->
+
+        <section class="pt-5">
+            <div class="container">
+                <div class="row">
+                    <div class="bg-holder bg-size"
+                        style="background-image:url(assets/img/gallery/dot-bg.png);background-position:bottom right;background-size:auto;">
+                    </div>
+                    <div class="col-lg-6 z-index-2">
+                        <h3 class="card-title text-center">Form Detection</h3>
+                        <form class="row g-3 mt-5" id="userForm">
+                            <div class="col-md-12">
+                                <label class="visually-hidden" for="name">Name</label>
+                                <input class="form-control form-livedoc-control" id="name" name="name" type="text"
+                                    placeholder="Name" required />
+                            </div>
+                            <div class="col-md-12">
+                                <label class="visually-hidden" for="age">Age :</label>
+                                <input class="form-control form-livedoc-control" id="age" name="age" type="number"
+                                    placeholder="Age : 34" />
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label visually-hidden" for="gender">Gender</label>
+                                <select class="form-select" id="gender" name="gender">
+                                    <option>Gender</option>
+                                    <option value="Male"> Male</option>
+                                    <option value="Woman"> Woman</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12">
+                                <label class="form-label visually-hidden" for="imageUpload">File</label>
+                                <input class="form-control form-livedoc-control" id="imageUpload" type="file" />
+                            </div>
+                            <input type="hidden" id="predictions" class="mt-3">
+                            <div class="col-5 mx-auto mt-5">
+                                <div class="d-grid">
+                                    <button class="btn btn-primary rounded-pill" type="submit">Input</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 z-index-2 mb-5 text-center">
+                        <h3 class="card-title text-center">Detection Results</h3>
+                        <div class="d-flex justify-content-center">
+                            <img id="selectedImage" class="img-fluid mt-3" style="max-width: 75%; height: auto;">
+                        </div>
+                        <div id="output" class="mt-4 text-start"></div> <!-- Text aligned to the left -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================-->
+        <!-- <section> begin ============================-->
+        <section class="py-0 bg-primary">
+
+            <div class="container">
+                <div class="row justify-content-md-center justify-content-center py-4">
+                    <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
+                        <p class="fs--1 my-2 fw-bold text-200">All rights Reserved &copy; Mochamad Riefky Rafliana
+                            Suwandy, 2024</p>
+                    </div>
+                </div>
+            </div>
+            <!-- end of .container-->
+
+        </section>
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+        </section>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="vendors/@popperjs/popper.min.js"></script>
+    <script src="vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="vendors/is/is.min.js"></script>
+    <script src="https://scripts.sirv.com/sirvjs/v3/sirv.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+    <script src="vendors/fontawesome/all.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100&amp;display=swap"
+        rel="stylesheet">
+</body>
+
+</html>
