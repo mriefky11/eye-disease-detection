@@ -1,2 +1,2 @@
 # eye-disease-detection
-Prototype Sistem Detesi Penyakit Mata 
+Prototype Sistem Deteksi Penyakit Mata 
